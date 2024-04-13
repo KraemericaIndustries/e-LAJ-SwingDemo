@@ -3,6 +3,7 @@ package gui;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -28,6 +29,9 @@ public class MainPanel extends JPanel {
 		
 		var gc = new GridBagConstraints();
 		
+		var rightPad = new Insets(0, 0, 0, 10);
+		var zeroInsets = new Insets(0, 0, 0, 0); 
+		
 		gc.gridx = 0;
 		gc.gridy = 0;
 		
@@ -43,10 +47,12 @@ public class MainPanel extends JPanel {
 		
 		gc.gridx = 0;
 		gc.anchor = GridBagConstraints.LINE_END;
+		gc.insets = rightPad;
 		add(nameLabel, gc);
 		
 		gc.gridx = 1;
 		gc.anchor = GridBagConstraints.LINE_START;
+		gc.insets = zeroInsets;
 		add(nameField, gc);
 		
 		gc.gridy++;
@@ -54,10 +60,12 @@ public class MainPanel extends JPanel {
 
 		gc.gridx = 0;
 		gc.anchor = GridBagConstraints.LINE_END;
+		gc.insets = rightPad;
 		add(passLabel, gc);
 		
 		gc.gridx = 1;
 		gc.anchor = GridBagConstraints.LINE_START;
+		gc.insets = zeroInsets;
 		add(passField, gc);
 		
 		gc.gridy++;
